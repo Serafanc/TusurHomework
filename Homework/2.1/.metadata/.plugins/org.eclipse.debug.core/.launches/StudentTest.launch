@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.junit.launchconfig">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/unit-online-tusur/src/test/java/online_tusur/unit_online_tusur/StudentTest.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
+<stringAttribute key="org.eclipse.jdt.junit.EXCLUDE_TAGS" value="negative"/>
+<booleanAttribute key="org.eclipse.jdt.junit.HAS_EXCLUDE_TAGS" value="true"/>
+<booleanAttribute key="org.eclipse.jdt.junit.HAS_INCLUDE_TAGS" value="false"/>
+<stringAttribute key="org.eclipse.jdt.junit.INCLUDE_TAGS" value=""/>
+<booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
+<stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value=""/>
+<stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit5"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="online_tusur.unit_online_tusur.StudentTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="unit-online-tusur"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-ea"/>
+</launchConfiguration>
