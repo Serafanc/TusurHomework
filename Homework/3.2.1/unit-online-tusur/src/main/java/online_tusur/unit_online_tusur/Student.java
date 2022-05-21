@@ -48,7 +48,7 @@ package online_tusur.unit_online_tusur;
 	}
 
 	public void setAge(int age) {
-		this.age = age > 17 && age < 50 ? age : 18;
+		this.age = age > 17 && age <= 50 ? age : 18;
 	}
 
 	public String getFullName() {

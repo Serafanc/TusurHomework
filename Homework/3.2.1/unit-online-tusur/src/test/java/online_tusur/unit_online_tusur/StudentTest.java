@@ -1,8 +1,13 @@
 package online_tusur.unit_online_tusur;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -11,10 +16,60 @@ public class StudentTest {
 	/*объект тестового класса  Student*/
 	private Student s = new Student();	 	   
 
+	
+	//Динамический тест
+	
+	@TestFactory
+	Collection<DynamicTest> dynamicTestAge(){
+
+	
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		Student s4 = new Student();
+		Student s5 = new Student();
+		
+		s1.setAge(17);
+		s2.setAge(18);
+		s3.setAge(32);
+		s4.setAge(50);
+		s5.setAge(55);
+		
+		return Arrays.asList(
+				DynamicTest.dynamicTest("test1", ()->assertEquals(s1.getAge(),17)),
+				DynamicTest.dynamicTest("test2", ()->assertEquals(s2.getAge(),18)),
+				DynamicTest.dynamicTest("test3", ()->assertEquals(s3.getAge(),32)),
+				DynamicTest.dynamicTest("test4", ()->assertEquals(s4.getAge(),50)),
+				DynamicTest.dynamicTest("test5", ()->assertEquals(s5.getAge(),55))	
+				);			
+	}
+	
+	@TestFactory
+	Collection<DynamicTest> dynamicTestFirstNameAndLastName(){
+	
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		Student s4 = new Student();		
+		
+		s1.setFirstName("ivvan");
+		s2.setFirstName("Ivan");
+		s3.setLastName("radiiiionooov");
+		s4.setLastName("Radionov");		
+		
+		return Arrays.asList(
+				DynamicTest.dynamicTest("test1", ()->assertEquals(s1.getFirstName(),"Ivan")),
+				DynamicTest.dynamicTest("test2", ()->assertEquals(s2.getFirstName(),"Ivan")),
+				DynamicTest.dynamicTest("test3", ()->assertEquals(s3.getLastName(),"Radionov")),
+				DynamicTest.dynamicTest("test4", ()->assertEquals(s4.getLastName(),"Radionov"))				
+			    );			
+	}
+	
+	
 	// Параметризированный тест 
 	
 	@ParameterizedTest
-	@CsvSource(value = {"17","18","32","50","55","60"})
+	@CsvSource(value = {"17","18","32","50","55"})
 	void ParamsAgeTest(int argument) {
 		s.setAge(argument);
 		assertEquals(s.getAge(),argument);
