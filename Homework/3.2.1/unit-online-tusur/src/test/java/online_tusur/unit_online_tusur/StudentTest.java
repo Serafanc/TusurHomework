@@ -3,13 +3,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 
 public class StudentTest {
 	/*объект тестового класса  Student*/
 	private Student s = new Student();	 	   
 
-	    
+	// Параметризированный тест 
+	
+	@ParameterizedTest
+	@CsvSource(value = {"17","18","32","50","55","60"})
+	void ParamsAgeTest(int argument) {
+		s.setAge(argument);
+		assertEquals(s.getAge(),argument);
+	}
+	
 /* проверка возраста студента, 
  выходящего за диапазон */
 	  @Test
@@ -169,5 +179,6 @@ public class StudentTest {
 		  System.out.println(s.getFullName());
 		  assertEquals(expectedFullName, actualsFullName);
 	  }
+	 
 	  
 }
