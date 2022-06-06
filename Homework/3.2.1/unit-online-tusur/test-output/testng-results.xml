@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="14" ignored="0" total="25" passed="11">
+<testng-results skipped="0" failed="17" ignored="0" total="34" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+  <suite name="Suite" duration-ms="91" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
     <groups>
+      <group name="testCollection">
+        <method signature="NewTest.test2()[pri:1, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test2" class="online_tusur.unit_online_tusur.NewTest"/>
+        <method signature="NewTest.test3()[pri:2, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test3" class="online_tusur.unit_online_tusur.NewTest"/>
+        <method signature="NewTest.test4()[pri:3, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test4" class="online_tusur.unit_online_tusur.NewTest"/>
+      </group> <!-- testCollection -->
+      <group name="testStudent">
+        <method signature="NewTest.test1(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test1" class="online_tusur.unit_online_tusur.NewTest"/>
+        <method signature="NewTest.test5(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test5" class="online_tusur.unit_online_tusur.NewTest"/>
+      </group> <!-- testStudent -->
     </groups>
-    <test name="Default test" duration-ms="113" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+    <test name="Test" duration-ms="91" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
       <class name="online_tusur.unit_online_tusur.FactoryStydentTest">
-        <test-method status="FAIL" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@1f57539, instance params:[online_tusur.unit_online_tusur.Student@6043cd28]]" name="test1" duration-ms="54" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@10d59286, instance params:[online_tusur.unit_online_tusur.Student@1f021e6c]]" name="test1" duration-ms="3" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@5123a213, instance params:[online_tusur.unit_online_tusur.Student@4ae82894]]" name="test1" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="FAIL" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6dde5c8c, instance params:[online_tusur.unit_online_tusur.Student@4516af24]]" name="test1" duration-ms="8" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <50> but was: <18>]]>
@@ -54,19 +71,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@536aaa8d, instance params:[online_tusur.unit_online_tusur.Student@45820e51]]" name="test1" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@59e5ddf, instance params:[online_tusur.unit_online_tusur.Student@7113b13f]]" name="test1" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@76f2b07d, instance params:[online_tusur.unit_online_tusur.Student@cb51256]]" name="test1" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@e320068, instance params:[online_tusur.unit_online_tusur.Student@42d8062c]]" name="test1" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6fb0d3ed, instance params:[online_tusur.unit_online_tusur.Student@587c290d]]" name="test1" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <32> but was: <18>]]>
@@ -113,7 +118,105 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@1f57539, instance params:[online_tusur.unit_online_tusur.Student@6043cd28]]" name="test2" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test1()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@fe18270, instance params:[online_tusur.unit_online_tusur.Student@103f852]]" name="test1" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@10d59286, instance params:[online_tusur.unit_online_tusur.Student@1f021e6c]]" name="test2" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <exception class="org.opentest4j.AssertionFailedError">
+            <message>
+              <![CDATA[expected: <18> but was: <32>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.opentest4j.AssertionFailedError: expected: <18> but was: <32>
+at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
+at online_tusur.unit_online_tusur.FactoryStydentTest.test2(FactoryStydentTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.opentest4j.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@5123a213, instance params:[online_tusur.unit_online_tusur.Student@4ae82894]]" name="test2" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <exception class="org.opentest4j.AssertionFailedError">
+            <message>
+              <![CDATA[expected: <18> but was: <32>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.opentest4j.AssertionFailedError: expected: <18> but was: <32>
+at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
+at online_tusur.unit_online_tusur.FactoryStydentTest.test2(FactoryStydentTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.opentest4j.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6dde5c8c, instance params:[online_tusur.unit_online_tusur.Student@4516af24]]" name="test2" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <50> but was: <32>]]>
@@ -160,7 +263,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@536aaa8d, instance params:[online_tusur.unit_online_tusur.Student@45820e51]]" name="test2" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6fb0d3ed, instance params:[online_tusur.unit_online_tusur.Student@587c290d]]" name="test2" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@fe18270, instance params:[online_tusur.unit_online_tusur.Student@103f852]]" name="test2" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <18> but was: <32>]]>
@@ -207,109 +314,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@59e5ddf, instance params:[online_tusur.unit_online_tusur.Student@7113b13f]]" name="test2" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <exception class="org.opentest4j.AssertionFailedError">
-            <message>
-              <![CDATA[expected: <18> but was: <32>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.opentest4j.AssertionFailedError: expected: <18> but was: <32>
-at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
-at online_tusur.unit_online_tusur.FactoryStydentTest.test2(FactoryStydentTest.java:37)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.opentest4j.AssertionFailedError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="FAIL" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@76f2b07d, instance params:[online_tusur.unit_online_tusur.Student@cb51256]]" name="test2" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <exception class="org.opentest4j.AssertionFailedError">
-            <message>
-              <![CDATA[expected: <18> but was: <32>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.opentest4j.AssertionFailedError: expected: <18> but was: <32>
-at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
-at online_tusur.unit_online_tusur.FactoryStydentTest.test2(FactoryStydentTest.java:37)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.opentest4j.AssertionFailedError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@e320068, instance params:[online_tusur.unit_online_tusur.Student@42d8062c]]" name="test2" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@1f57539, instance params:[online_tusur.unit_online_tusur.Student@6043cd28]]" name="test3" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@536aaa8d, instance params:[online_tusur.unit_online_tusur.Student@45820e51]]" name="test3" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@10d59286, instance params:[online_tusur.unit_online_tusur.Student@1f021e6c]]" name="test3" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <18> but was: <50>]]>
@@ -356,7 +361,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@59e5ddf, instance params:[online_tusur.unit_online_tusur.Student@7113b13f]]" name="test3" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@5123a213, instance params:[online_tusur.unit_online_tusur.Student@4ae82894]]" name="test3" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <18> but was: <50>]]>
@@ -403,54 +408,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@76f2b07d, instance params:[online_tusur.unit_online_tusur.Student@cb51256]]" name="test3" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <exception class="org.opentest4j.AssertionFailedError">
-            <message>
-              <![CDATA[expected: <18> but was: <50>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.opentest4j.AssertionFailedError: expected: <18> but was: <50>
-at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
-at online_tusur.unit_online_tusur.FactoryStydentTest.test3(FactoryStydentTest.java:44)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.opentest4j.AssertionFailedError -->
+        <test-method status="PASS" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6dde5c8c, instance params:[online_tusur.unit_online_tusur.Student@4516af24]]" name="test3" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@e320068, instance params:[online_tusur.unit_online_tusur.Student@42d8062c]]" name="test3" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6fb0d3ed, instance params:[online_tusur.unit_online_tusur.Student@587c290d]]" name="test3" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <32> but was: <50>]]>
@@ -497,11 +459,58 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@1f57539, instance params:[online_tusur.unit_online_tusur.Student@6043cd28]]" name="test4" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test3()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@fe18270, instance params:[online_tusur.unit_online_tusur.Student@103f852]]" name="test3" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <exception class="org.opentest4j.AssertionFailedError">
+            <message>
+              <![CDATA[expected: <18> but was: <50>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.opentest4j.AssertionFailedError: expected: <18> but was: <50>
+at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
+at online_tusur.unit_online_tusur.FactoryStydentTest.test3(FactoryStydentTest.java:44)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.opentest4j.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@10d59286, instance params:[online_tusur.unit_online_tusur.Student@1f021e6c]]" name="test4" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-        <test-method status="FAIL" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@536aaa8d, instance params:[online_tusur.unit_online_tusur.Student@45820e51]]" name="test4" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@5123a213, instance params:[online_tusur.unit_online_tusur.Student@4ae82894]]" name="test4" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <Ivaaaaan> but was: <Ivan>]]>
@@ -548,11 +557,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@59e5ddf, instance params:[online_tusur.unit_online_tusur.Student@7113b13f]]" name="test4" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6dde5c8c, instance params:[online_tusur.unit_online_tusur.Student@4516af24]]" name="test4" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-        <test-method status="FAIL" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@76f2b07d, instance params:[online_tusur.unit_online_tusur.Student@cb51256]]" name="test4" duration-ms="1" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6fb0d3ed, instance params:[online_tusur.unit_online_tusur.Student@587c290d]]" name="test4" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="FAIL" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@fe18270, instance params:[online_tusur.unit_online_tusur.Student@103f852]]" name="test4" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <Ivaaaaan> but was: <Ivan>]]>
@@ -599,23 +612,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@e320068, instance params:[online_tusur.unit_online_tusur.Student@42d8062c]]" name="test4" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@1f57539, instance params:[online_tusur.unit_online_tusur.Student@6043cd28]]" name="test5" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@10d59286, instance params:[online_tusur.unit_online_tusur.Student@1f021e6c]]" name="test5" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test5 -->
-        <test-method status="PASS" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@536aaa8d, instance params:[online_tusur.unit_online_tusur.Student@45820e51]]" name="test5" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method status="PASS" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@59e5ddf, instance params:[online_tusur.unit_online_tusur.Student@7113b13f]]" name="test5" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method status="FAIL" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@76f2b07d, instance params:[online_tusur.unit_online_tusur.Student@cb51256]]" name="test5" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="FAIL" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@5123a213, instance params:[online_tusur.unit_online_tusur.Student@4ae82894]]" name="test5" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <Radiiiionov> but was: <Radionov>]]>
@@ -662,7 +663,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test5 -->
-        <test-method status="FAIL" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@e320068, instance params:[online_tusur.unit_online_tusur.Student@42d8062c]]" name="test5" duration-ms="0" started-at="2022-06-06T19:49:14 GMT+07:00" finished-at="2022-06-06T19:49:14 GMT+07:00">
+        <test-method status="PASS" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6dde5c8c, instance params:[online_tusur.unit_online_tusur.Student@4516af24]]" name="test5" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="FAIL" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@6fb0d3ed, instance params:[online_tusur.unit_online_tusur.Student@587c290d]]" name="test5" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <exception class="org.opentest4j.AssertionFailedError">
             <message>
               <![CDATA[expected: <Radiiiionov> but was: <Radionov>]]>
@@ -706,10 +711,262 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.opentest4j.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test5()[pri:0, instance:online_tusur.unit_online_tusur.FactoryStydentTest@fe18270, instance params:[online_tusur.unit_online_tusur.Student@103f852]]" name="test5" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test5 -->
       </class> <!-- online_tusur.unit_online_tusur.FactoryStydentTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="online_tusur.unit_online_tusur.NewTest">
+        <test-method status="PASS" signature="bef_class()[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="bef_class" is-config="true" duration-ms="2" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bef_class -->
+        <test-method status="FAIL" signature="test1(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test1" duration-ms="5" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [18] but found [0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [18] but found [0]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at online_tusur.unit_online_tusur.NewTest.test1(NewTest.java:51)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test5(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test5" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" data-provider="data" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test5(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test5" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" data-provider="data" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test5(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test5" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" data-provider="data" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[32]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[32]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test5(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test5" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" data-provider="data" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="FAIL" signature="test5(int,int)[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test5" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" data-provider="data" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [18] but found [50]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [18] but found [50]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at online_tusur.unit_online_tusur.NewTest.test5(NewTest.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="test2()[pri:1, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test2" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test3()[pri:2, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test3" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="FAIL" signature="test4()[pri:3, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="test4" duration-ms="1" started-at="2022-06-06T20:32:51 GMT+07:00" depends-on-methods="online_tusur.unit_online_tusur.NewTest.test3" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at online_tusur.unit_online_tusur.NewTest.test4(NewTest.java:78)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="aft_class()[pri:0, instance:online_tusur.unit_online_tusur.NewTest@376b4233]" name="aft_class" is-config="true" duration-ms="0" started-at="2022-06-06T20:32:51 GMT+07:00" finished-at="2022-06-06T20:32:51 GMT+07:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aft_class -->
+      </class> <!-- online_tusur.unit_online_tusur.NewTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

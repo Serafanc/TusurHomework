@@ -32,6 +32,9 @@ public class NewTest {
 	
 	@Test(dataProvider = "data",groups = {"testStudent"})
 	public void test5(int age, int expAge) {
+		long id = Thread.currentThread().getId();
+		System.out.println(id);
+		
 		s.setAge(age);
 		assertEquals(expAge,s.getAge());
 	}
@@ -41,12 +44,18 @@ public class NewTest {
   @Test(priority = 0, groups = {"testStudent"})
   @Parameters({"age","expAge"})
   public void test1(@Optional("0") int age, @Optional("0") int expAge) {
+	  long id = Thread.currentThread().getId();
+		System.out.println(id);
+		
 	  s.setAge(age);
 	  assertEquals(expAge,s.getAge());	  
   }
   
   @Test(priority = 2, groups = {"testCollection"})
   public void test3() {
+	  
+	  long id = Thread.currentThread().getId();
+		System.out.println(id);
 	  int k = st.size();
 	  st.add(new Student("Piter","Pen",16));
 	  
@@ -55,11 +64,17 @@ public class NewTest {
   
   @Test(priority = 1, groups = {"testCollection"})
   public void test2() {
+	  long id = Thread.currentThread().getId();
+		System.out.println(id);
+		
 	  assertTrue(st.isEmpty());
   }
   
   @Test(priority = 3, groups = {"testCollection"}, dependsOnMethods = {"test3"})
   public void test4() {
+	  long id = Thread.currentThread().getId();
+		System.out.println(id);
+		
 	  assertTrue(st.isEmpty());
   }
 }

@@ -1,0 +1,37 @@
+Отчет
+Failure of test cases and its details are : test1
+Success of test cases and its details are : test5
+Success of test cases and its details are : test5
+Success of test cases and its details are : test5
+Success of test cases and its details are : test5
+Failure of test cases and its details are : test5
+Success of test cases and its details are : test2
+Success of test cases and its details are : test3
+Failure of test cases and its details are : test4
+Success of test cases and its details are : test1
+Success of test cases and its details are : test1
+Failure of test cases and its details are : test1
+Failure of test cases and its details are : test1
+Success of test cases and its details are : test1
+Failure of test cases and its details are : test2
+Failure of test cases and its details are : test2
+Failure of test cases and its details are : test2
+Success of test cases and its details are : test2
+Failure of test cases and its details are : test2
+Failure of test cases and its details are : test3
+Failure of test cases and its details are : test3
+Success of test cases and its details are : test3
+Failure of test cases and its details are : test3
+Failure of test cases and its details are : test3
+Success of test cases and its details are : test4
+Failure of test cases and its details are : test4
+Success of test cases and its details are : test4
+Success of test cases and its details are : test4
+Failure of test cases and its details are : test4
+Success of test cases and its details are : test5
+Failure of test cases and its details are : test5
+Success of test cases and its details are : test5
+Failure of test cases and its details are : test5
+Success of test cases and its details are : test5
+This is onFinish Passed method17
+This is onFinish Failed method17
