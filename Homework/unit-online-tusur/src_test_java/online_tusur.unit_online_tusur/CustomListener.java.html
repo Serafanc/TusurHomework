@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>CustomListener.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">StudentTest (07.06.2022 22:00:00)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">CustomListener.java</span></div><h1>CustomListener.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.testng.ITestContext;  
+import org.testng.ITestListener;  
+import org.testng.ITestResult;  
+<span class="nc" id="L14">public class CustomListener implements ITestListener  </span>
+{  
+	
+<span class="nc" id="L17">	DateFormat dateFormat = new SimpleDateFormat(&quot;yyyy-MM-dd_HH-mm&quot;);</span>
+<span class="nc" id="L18">    Date date = new Date();</span>
+<span class="nc" id="L19">    String dateTxt = dateFormat.format(date) + &quot;.txt&quot;;</span>
+    PrintWriter writer;
+		
+			
+@Override  
+public void onTestStart(ITestResult result)   {  
+// TODO Auto-generated method stub  
+
+<span class="nc" id="L27">}  </span>
+  
+@Override  
+public void onTestSuccess(ITestResult result) {  
+// TODO Auto-generated method stub  
+<span class="nc" id="L32">System.out.println(&quot;Success of test cases and its details are : &quot;+result.getName());  </span>
+<span class="nc" id="L33">writer.println(&quot;Success of test cases and its details are : &quot;+result.getName());</span>
+<span class="nc" id="L34">}  </span>
+  
+@Override  
+public void onTestFailure(ITestResult result) {  
+// TODO Auto-generated method stub  
+<span class="nc" id="L39">System.out.println(&quot;Failure of test cases and its details are : &quot;+result.getName());  </span>
+<span class="nc" id="L40">writer.println(&quot;Failure of test cases and its details are : &quot;+result.getName());</span>
+
+<span class="nc" id="L42">}  </span>
+  
+@Override  
+public void onTestSkipped(ITestResult result) {  
+// TODO Auto-generated method stub  
+<span class="nc" id="L47">System.out.println(&quot;Skip of test cases and its details are : &quot;+result.getName());  </span>
+<span class="nc" id="L48">}  </span>
+  
+@Override  
+public void onTestFailedButWithinSuccessPercentage(ITestResult result) {  
+// TODO Auto-generated method stub  
+<span class="nc" id="L53">System.out.println(&quot;Failure of test cases and its details are : &quot;+result.getName());  </span>
+<span class="nc" id="L54">}  </span>
+  
+@Override  
+public void onStart(ITestContext context) {  
+// TODO Auto-generated method stub
+	try {
+<span class="nc" id="L60">		writer = new PrintWriter(dateTxt, &quot;UTF-8&quot;);</span>
+<span class="nc" id="L61">		writer.println(&quot;Отчет&quot;);</span>
+<span class="nc" id="L62">	} catch (FileNotFoundException e) {</span>
+		// TODO Auto-generated catch block
+<span class="nc" id="L64">		e.printStackTrace();</span>
+<span class="nc" id="L65">	} catch (UnsupportedEncodingException e) {</span>
+		// TODO Auto-generated catch block
+<span class="nc" id="L67">		e.printStackTrace();</span>
+	}
+<span class="nc" id="L69">}  </span>
+  
+@Override  
+public void onFinish(ITestContext context) {  
+// TODO Auto-generated method stub  
+<span class="nc" id="L74">	System.out.println(&quot;This is onFinish method&quot; +context.getPassedTests().getAllResults().size());</span>
+<span class="nc" id="L75">	 System.out.println(&quot;This is onFinish method&quot; +context.getFailedTests().getAllResults().size());</span>
+	 
+	 			
+<span class="nc" id="L78">			writer.println(&quot;This is onFinish Passed method&quot; +context.getPassedTests().getAllResults().size());</span>
+<span class="nc" id="L79">			writer.println(&quot;This is onFinish Failed method&quot; +context.getFailedTests().getAllResults().size());</span>
+			
+			 
+<span class="nc" id="L82">			writer.close();</span>
+<span class="nc" id="L83">			System.out.println(&quot;Отчет записан в файл &quot;);</span>
+		
+<span class="nc" id="L85">}  </span>
+} 
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span>StudentTest (07.06.2022 22:00:00)</div></body></html>

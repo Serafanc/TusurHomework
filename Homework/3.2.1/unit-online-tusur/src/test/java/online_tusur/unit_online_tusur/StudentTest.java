@@ -1,6 +1,8 @@
 package online_tusur.unit_online_tusur;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -50,18 +52,24 @@ public class StudentTest {
 		Student s1 = new Student();
 		Student s2 = new Student();
 		Student s3 = new Student();
-		Student s4 = new Student();		
+		Student s4 = new Student();	
+		Student s5 = new Student();
+		Student s6 = new Student();
 		
 		s1.setFirstName("ivvan");
 		s2.setFirstName("Ivan");
-		s3.setLastName("radiiiionooov");
-		s4.setLastName("Radionov");		
+		s3.setFirstName("i");
+		s4.setLastName("radiiiionooov");
+		s5.setLastName("Radionov");	
+		s6.setLastName("r");	
 		
 		return Arrays.asList(
 				DynamicTest.dynamicTest("test1", ()->assertEquals(s1.getFirstName(),"Ivan")),
 				DynamicTest.dynamicTest("test2", ()->assertEquals(s2.getFirstName(),"Ivan")),
-				DynamicTest.dynamicTest("test3", ()->assertEquals(s3.getLastName(),"Radionov")),
-				DynamicTest.dynamicTest("test4", ()->assertEquals(s4.getLastName(),"Radionov"))				
+				DynamicTest.dynamicTest("test2", ()->assertEquals(s3.getFirstName(),"Ivan")),
+				DynamicTest.dynamicTest("test3", ()->assertEquals(s4.getLastName(),"Radionov")),
+				DynamicTest.dynamicTest("test4", ()->assertEquals(s5.getLastName(),"Radionov")),
+				DynamicTest.dynamicTest("test5", ()->assertEquals(s6.getLastName(),"Radionov"))
 			    );			
 	}
 	
@@ -75,6 +83,25 @@ public class StudentTest {
 		assertEquals(s.getAge(),argument);
 	}
 	
+	// создание объекта класса
+	
+	@Test
+	void test_object () {
+		String fname = "Ivan";
+		String lname = "SIDORov";
+		int age = 25;
+		
+		String expectedStudent = lname+" "+fname+""+age;
+		
+		ByteArrayOutputStream output = new ByteArrayOutputStream();
+		PrintStream old = System.out;
+		System.setOut(new PrintStream(output));
+		Main.main(new String[] {});
+		assertEquals(expectedStudent,output.toString());
+		System.setOut(old);
+		
+	}
+	
 /* проверка возраста студента, 
  выходящего за диапазон */
 	  @Test
@@ -85,6 +112,75 @@ public class StudentTest {
 	    int actualsAge=s.getAge();
 	    assertEquals(expectedAge, actualsAge);	
 
+	  }
+	  
+	// минимальный возраст
+	  @Test
+	  void test_minAge() {
+		int age = 18;
+		int age1 = 33;
+		int age2 = 50;
+		
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		
+		s1.setAge(age);
+		s2.setAge(age1);
+        s3.setAge(age2);
+        
+        Student [] students = {s1,s2,s3};
+        
+	    int expectedAge = Student.minAge(students);
+	    int actualsAge= s.minAge(students);
+	    
+	    assertEquals(expectedAge, actualsAge);
+	  }
+	  
+	// максимальный возраст
+		  @Test
+		  void test_maxAge() {
+			int age = 18;
+			int age1 = 33;
+			int age2 = 50;
+			
+			Student s1 = new Student();
+			Student s2 = new Student();
+			Student s3 = new Student();
+			
+			s1.setAge(age);
+			s2.setAge(age1);
+	        s3.setAge(age2);
+	        
+	        Student [] students = {s1,s2,s3};
+	        
+		    int expectedAge = Student.maxAge(students);
+		    int actualsAge= s.maxAge(students);
+		    
+		    assertEquals(expectedAge, actualsAge);
+		  }
+	  
+	// средний возраст
+	  @Test
+	  void test_avgAge() {
+		int age = 18;
+		int age1 = 33;
+		int age2 = 50;
+		
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		
+		s1.setAge(age);
+		s2.setAge(age1);
+        s3.setAge(age2);
+        
+        Student [] students = {s1,s2,s3};
+        
+	    int expectedAge = (age+age1+age2)/3;
+	    int actualsAge= s.avgAge(students);
+	    
+	    assertEquals(expectedAge, actualsAge);
 	  }
 	  
 	//Тесты на проверку возраста  
@@ -121,6 +217,8 @@ public class StudentTest {
 		  assertEquals(expectedAge, actualsAge);
 	  }
 	  
+	  
+	  
 	  @Tag("positive")
 	  @Test
 	  void testAgeOnTheRightBorder() {
@@ -142,6 +240,9 @@ public class StudentTest {
 		  System.out.println(s.getAge());
 		  assertEquals(expectedAge, actualsAge);
 	  }
+	  
+	  
+	  
 	 // Тесты на проверку регистров 
 	  @Tag("positive")
 	  @Test

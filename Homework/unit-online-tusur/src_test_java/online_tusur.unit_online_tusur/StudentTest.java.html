@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>StudentTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">StudentTest (07.06.2022 22:00:00)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">StudentTest.java</span></div><h1>StudentTest.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+
+<span class="fc" id="L17">public class StudentTest {</span>
+	/*объект тестового класса  Student*/
+<span class="fc" id="L19">	private Student s = new Student();	 	   </span>
+
+	
+	//Динамический тест
+	
+	@TestFactory
+	Collection&lt;DynamicTest&gt; dynamicTestAge(){
+
+	
+<span class="fc" id="L28">		Student s1 = new Student();</span>
+<span class="fc" id="L29">		Student s2 = new Student();</span>
+<span class="fc" id="L30">		Student s3 = new Student();</span>
+<span class="fc" id="L31">		Student s4 = new Student();</span>
+<span class="fc" id="L32">		Student s5 = new Student();</span>
+		
+<span class="fc" id="L34">		s1.setAge(17);</span>
+<span class="fc" id="L35">		s2.setAge(18);</span>
+<span class="fc" id="L36">		s3.setAge(32);</span>
+<span class="fc" id="L37">		s4.setAge(50);</span>
+<span class="fc" id="L38">		s5.setAge(55);</span>
+		
+<span class="fc" id="L40">		return Arrays.asList(</span>
+<span class="pc" id="L41">				DynamicTest.dynamicTest(&quot;test1&quot;, ()-&gt;assertEquals(s1.getAge(),17)),</span>
+<span class="fc" id="L42">				DynamicTest.dynamicTest(&quot;test2&quot;, ()-&gt;assertEquals(s2.getAge(),18)),</span>
+<span class="fc" id="L43">				DynamicTest.dynamicTest(&quot;test3&quot;, ()-&gt;assertEquals(s3.getAge(),32)),</span>
+<span class="fc" id="L44">				DynamicTest.dynamicTest(&quot;test4&quot;, ()-&gt;assertEquals(s4.getAge(),50)),</span>
+<span class="pc" id="L45">				DynamicTest.dynamicTest(&quot;test5&quot;, ()-&gt;assertEquals(s5.getAge(),55))	</span>
+				);			
+	}
+	
+	@TestFactory
+	Collection&lt;DynamicTest&gt; dynamicTestFirstNameAndLastName(){
+	
+<span class="fc" id="L52">		Student s1 = new Student();</span>
+<span class="fc" id="L53">		Student s2 = new Student();</span>
+<span class="fc" id="L54">		Student s3 = new Student();</span>
+<span class="fc" id="L55">		Student s4 = new Student();	</span>
+<span class="fc" id="L56">		Student s5 = new Student();</span>
+<span class="fc" id="L57">		Student s6 = new Student();</span>
+		
+<span class="fc" id="L59">		s1.setFirstName(&quot;ivvan&quot;);</span>
+<span class="fc" id="L60">		s2.setFirstName(&quot;Ivan&quot;);</span>
+<span class="fc" id="L61">		s3.setFirstName(&quot;i&quot;);</span>
+<span class="fc" id="L62">		s4.setLastName(&quot;radiiiionooov&quot;);</span>
+<span class="fc" id="L63">		s5.setLastName(&quot;Radionov&quot;);	</span>
+<span class="fc" id="L64">		s6.setLastName(&quot;r&quot;);	</span>
+		
+<span class="fc" id="L66">		return Arrays.asList(</span>
+<span class="pc" id="L67">				DynamicTest.dynamicTest(&quot;test1&quot;, ()-&gt;assertEquals(s1.getFirstName(),&quot;Ivan&quot;)),</span>
+<span class="fc" id="L68">				DynamicTest.dynamicTest(&quot;test2&quot;, ()-&gt;assertEquals(s2.getFirstName(),&quot;Ivan&quot;)),</span>
+<span class="pc" id="L69">				DynamicTest.dynamicTest(&quot;test2&quot;, ()-&gt;assertEquals(s3.getFirstName(),&quot;Ivan&quot;)),</span>
+<span class="pc" id="L70">				DynamicTest.dynamicTest(&quot;test3&quot;, ()-&gt;assertEquals(s4.getLastName(),&quot;Radionov&quot;)),</span>
+<span class="fc" id="L71">				DynamicTest.dynamicTest(&quot;test4&quot;, ()-&gt;assertEquals(s5.getLastName(),&quot;Radionov&quot;)),</span>
+<span class="pc" id="L72">				DynamicTest.dynamicTest(&quot;test5&quot;, ()-&gt;assertEquals(s6.getLastName(),&quot;Radionov&quot;))</span>
+			    );			
+	}
+	
+	
+	// Параметризированный тест 
+	
+	@ParameterizedTest
+	@CsvSource(value = {&quot;17&quot;,&quot;18&quot;,&quot;32&quot;,&quot;50&quot;,&quot;55&quot;})
+	void ParamsAgeTest(int argument) {
+<span class="fc" id="L82">		s.setAge(argument);</span>
+<span class="fc" id="L83">		assertEquals(s.getAge(),argument);</span>
+<span class="fc" id="L84">	}</span>
+	
+	// создание объекта класса
+	
+	@Test
+	void test_object () {
+<span class="fc" id="L90">		String fname = &quot;Ivan&quot;;</span>
+<span class="fc" id="L91">		String lname = &quot;SIDORov&quot;;</span>
+<span class="fc" id="L92">		int age = 25;</span>
+		
+<span class="fc" id="L94">		String expectedStudent = lname+&quot; &quot;+fname+&quot;&quot;+age;</span>
+		
+<span class="fc" id="L96">		ByteArrayOutputStream output = new ByteArrayOutputStream();</span>
+<span class="fc" id="L97">		PrintStream old = System.out;</span>
+<span class="fc" id="L98">		System.setOut(new PrintStream(output));</span>
+<span class="fc" id="L99">		Main.main(new String[] {});</span>
+<span class="nc" id="L100">		assertEquals(expectedStudent,output.toString());</span>
+<span class="nc" id="L101">		System.setOut(old);</span>
+		
+<span class="nc" id="L103">	}</span>
+	
+/* проверка возраста студента, 
+ выходящего за диапазон */
+	  @Test
+	  void test_assert() {
+<span class="fc" id="L109">		int age = 26;</span>
+<span class="fc" id="L110">		s.setAge(age);</span>
+<span class="fc" id="L111">	    int expectedAge = 26;</span>
+<span class="fc" id="L112">	    int actualsAge=s.getAge();</span>
+<span class="fc" id="L113">	    assertEquals(expectedAge, actualsAge);	</span>
+
+<span class="fc" id="L115">	  }</span>
+	  
+	// минимальный возраст
+	  @Test
+	  void test_minAge() {
+<span class="fc" id="L120">		int age = 18;</span>
+<span class="fc" id="L121">		int age1 = 33;</span>
+<span class="fc" id="L122">		int age2 = 50;</span>
+		
+<span class="fc" id="L124">		Student s1 = new Student();</span>
+<span class="fc" id="L125">		Student s2 = new Student();</span>
+<span class="fc" id="L126">		Student s3 = new Student();</span>
+		
+<span class="fc" id="L128">		s1.setAge(age);</span>
+<span class="fc" id="L129">		s2.setAge(age1);</span>
+<span class="fc" id="L130">        s3.setAge(age2);</span>
+        
+<span class="fc" id="L132">        Student [] students = {s1,s2,s3};</span>
+        
+<span class="fc" id="L134">	    int expectedAge = Student.minAge(students);</span>
+<span class="fc" id="L135">	    int actualsAge= s.minAge(students);</span>
+	    
+<span class="fc" id="L137">	    assertEquals(expectedAge, actualsAge);</span>
+<span class="fc" id="L138">	  }</span>
+	  
+	// максимальный возраст
+		  @Test
+		  void test_maxAge() {
+<span class="fc" id="L143">			int age = 18;</span>
+<span class="fc" id="L144">			int age1 = 33;</span>
+<span class="fc" id="L145">			int age2 = 50;</span>
+			
+<span class="fc" id="L147">			Student s1 = new Student();</span>
+<span class="fc" id="L148">			Student s2 = new Student();</span>
+<span class="fc" id="L149">			Student s3 = new Student();</span>
+			
+<span class="fc" id="L151">			s1.setAge(age);</span>
+<span class="fc" id="L152">			s2.setAge(age1);</span>
+<span class="fc" id="L153">	        s3.setAge(age2);</span>
+	        
+<span class="fc" id="L155">	        Student [] students = {s1,s2,s3};</span>
+	        
+<span class="fc" id="L157">		    int expectedAge = Student.maxAge(students);</span>
+<span class="fc" id="L158">		    int actualsAge= s.maxAge(students);</span>
+		    
+<span class="fc" id="L160">		    assertEquals(expectedAge, actualsAge);</span>
+<span class="fc" id="L161">		  }</span>
+	  
+	// средний возраст
+	  @Test
+	  void test_avgAge() {
+<span class="fc" id="L166">		int age = 18;</span>
+<span class="fc" id="L167">		int age1 = 33;</span>
+<span class="fc" id="L168">		int age2 = 50;</span>
+		
+<span class="fc" id="L170">		Student s1 = new Student();</span>
+<span class="fc" id="L171">		Student s2 = new Student();</span>
+<span class="fc" id="L172">		Student s3 = new Student();</span>
+		
+<span class="fc" id="L174">		s1.setAge(age);</span>
+<span class="fc" id="L175">		s2.setAge(age1);</span>
+<span class="fc" id="L176">        s3.setAge(age2);</span>
+        
+<span class="fc" id="L178">        Student [] students = {s1,s2,s3};</span>
+        
+<span class="fc" id="L180">	    int expectedAge = (age+age1+age2)/3;</span>
+<span class="fc" id="L181">	    int actualsAge= s.avgAge(students);</span>
+	    
+<span class="fc" id="L183">	    assertEquals(expectedAge, actualsAge);</span>
+<span class="fc" id="L184">	  }</span>
+	  
+	//Тесты на проверку возраста  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testAgeOutsideTheLeftBorder() {
+<span class="nc" id="L190">		  int age = 17;</span>
+<span class="nc" id="L191">		  s.setAge(age);</span>
+<span class="nc" id="L192">		  int expectedAge = age;</span>
+<span class="nc" id="L193">		  int actualsAge=s.getAge();</span>
+<span class="nc" id="L194">		  System.out.println(s.getAge());</span>
+<span class="nc" id="L195">		  assertEquals(expectedAge, actualsAge);</span>
+<span class="nc" id="L196">	  }</span>
+	  
+	  @Tag(&quot;positive&quot;)
+	  @Test
+	  void testAgeOnTheLeftBorder() {
+<span class="fc" id="L201">		  int age = 18;</span>
+<span class="fc" id="L202">		  s.setAge(age);</span>
+<span class="fc" id="L203">		  int expectedAge = age;</span>
+<span class="fc" id="L204">		  int actualsAge=s.getAge();</span>
+<span class="fc" id="L205">		  System.out.println(s.getAge());</span>
+<span class="fc" id="L206">		  assertEquals(expectedAge, actualsAge);</span>
+<span class="fc" id="L207">	  }</span>
+	  
+	  @Tag(&quot;positive&quot;)
+	  @Test
+	  void testAgeWithinTheBorder() {
+<span class="fc" id="L212">		  int age = 35;</span>
+<span class="fc" id="L213">		  s.setAge(age);</span>
+<span class="fc" id="L214">		  int expectedAge = age;</span>
+<span class="fc" id="L215">		  int actualsAge=s.getAge();</span>
+<span class="fc" id="L216">		  System.out.println(s.getAge());</span>
+<span class="fc" id="L217">		  assertEquals(expectedAge, actualsAge);</span>
+<span class="fc" id="L218">	  }</span>
+	  
+	  
+	  
+	  @Tag(&quot;positive&quot;)
+	  @Test
+	  void testAgeOnTheRightBorder() {
+<span class="fc" id="L225">		  int age = 50;</span>
+<span class="fc" id="L226">		  s.setAge(age);</span>
+<span class="fc" id="L227">		  int expectedAge = age;</span>
+<span class="fc" id="L228">		  int actualsAge=s.getAge();</span>
+<span class="fc" id="L229">		  System.out.println(s.getAge());</span>
+<span class="fc" id="L230">		  assertEquals(expectedAge, actualsAge);</span>
+<span class="fc" id="L231">	  }</span>
+	  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testAgeOutsideOnTheRightBorder() {
+<span class="nc" id="L236">		  int age = 51;</span>
+<span class="nc" id="L237">		  s.setAge(age);</span>
+<span class="nc" id="L238">		  int expectedAge = age;</span>
+<span class="nc" id="L239">		  int actualsAge=s.getAge();</span>
+<span class="nc" id="L240">		  System.out.println(s.getAge());</span>
+<span class="nc" id="L241">		  assertEquals(expectedAge, actualsAge);</span>
+<span class="nc" id="L242">	  }</span>
+	  
+	  
+	  
+	 // Тесты на проверку регистров 
+	  @Tag(&quot;positive&quot;)
+	  @Test
+	  void testFirstNameTrue() {
+<span class="fc" id="L250">		  String firstName = &quot;Ivan&quot;;</span>
+<span class="fc" id="L251">		  s.setFirstName(firstName);</span>
+<span class="fc" id="L252">		  String expectedFirstName = firstName;</span>
+<span class="fc" id="L253">		  String actualsFirstName = s.getFirstName();</span>
+<span class="fc" id="L254">		  System.out.println(s.getFirstName());</span>
+<span class="fc" id="L255">		  assertEquals(expectedFirstName, actualsFirstName);</span>
+<span class="fc" id="L256">	  }</span>
+	  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testFirstNameFalse() {
+<span class="nc" id="L261">		  String firstName = &quot;ivan&quot;;</span>
+<span class="nc" id="L262">		  s.setFirstName(firstName);</span>
+<span class="nc" id="L263">		  String expectedFirstName = firstName;</span>
+<span class="nc" id="L264">		  String actualsFirstName = s.getFirstName();</span>
+<span class="nc" id="L265">		  System.out.println(s.getFirstName());</span>
+<span class="nc" id="L266">		  assertEquals(expectedFirstName, actualsFirstName);</span>
+<span class="nc" id="L267">	  }</span>
+	  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testDoubleFirstNameFalse() {
+<span class="nc" id="L272">		  String firstName = &quot;ivan-serg&quot;;</span>
+<span class="nc" id="L273">		  s.setFirstName(firstName);</span>
+<span class="nc" id="L274">		  String expectedFirstName = firstName;</span>
+<span class="nc" id="L275">		  String actualsFirstName = s.getFirstName();</span>
+<span class="nc" id="L276">		  System.out.println(s.getFirstName());</span>
+<span class="nc" id="L277">		  assertEquals(expectedFirstName, actualsFirstName);</span>
+<span class="nc" id="L278">	  }</span>
+	  
+	  @Tag(&quot;positive&quot;)
+	  @Test
+	  void testLastNameTrue() {
+<span class="fc" id="L283">		  String lastName = &quot;Radionov&quot;;</span>
+<span class="fc" id="L284">		  s.setLastName(lastName);</span>
+<span class="fc" id="L285">		  String expectedLastName = lastName;</span>
+<span class="fc" id="L286">		  String actualsLastName = s.getLastName();</span>
+<span class="fc" id="L287">		  System.out.println(s.getLastName());</span>
+<span class="fc" id="L288">		  assertEquals(expectedLastName, actualsLastName);</span>
+<span class="fc" id="L289">	  }</span>
+	  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testLastNameFalse() {
+<span class="nc" id="L294">		  String lastName = &quot;radionov&quot;;</span>
+<span class="nc" id="L295">		  s.setLastName(lastName);</span>
+<span class="nc" id="L296">		  String expectedLastName = lastName;</span>
+<span class="nc" id="L297">		  String actualsLastName = s.getLastName();</span>
+<span class="nc" id="L298">		  System.out.println(s.getLastName());</span>
+<span class="nc" id="L299">		  assertEquals(expectedLastName, actualsLastName);</span>
+<span class="nc" id="L300">	  }</span>
+	  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testDoubleLastNameFalse() {
+<span class="nc" id="L305">		  String lastName = &quot;radionov-novikov&quot;;</span>
+<span class="nc" id="L306">		  s.setLastName(lastName);</span>
+<span class="nc" id="L307">		  String expectedLastName = lastName;</span>
+<span class="nc" id="L308">		  String actualsLastName = s.getLastName();</span>
+<span class="nc" id="L309">		  System.out.println(s.getLastName());</span>
+<span class="nc" id="L310">		  assertEquals(expectedLastName, actualsLastName);</span>
+<span class="nc" id="L311">	  }</span>
+	  
+	  @Tag(&quot;positive&quot;)
+	  @Test
+	  void testFullNameTrue() {
+<span class="fc" id="L316">		  String firstName = &quot;Ivan&quot;;</span>
+<span class="fc" id="L317">		  String lastName = &quot;Radionov&quot;;</span>
+<span class="fc" id="L318">		  s.setFirstName(firstName);</span>
+<span class="fc" id="L319">		  s.setLastName(lastName);</span>
+<span class="fc" id="L320">		  String expectedFullName = &quot;Radionov Ivan&quot;;</span>
+<span class="fc" id="L321">		  String actualsFullName = s.getFullName();</span>
+<span class="fc" id="L322">		  System.out.println(s.getFullName());</span>
+<span class="fc" id="L323">		  assertEquals(expectedFullName, actualsFullName);</span>
+<span class="fc" id="L324">	  }</span>
+	  
+	  @Tag(&quot;negative&quot;)
+	  @Test
+	  void testFullNameFalse() {
+<span class="nc" id="L329">		  String firstName = &quot;Ivan&quot;;</span>
+<span class="nc" id="L330">		  String lastName = &quot;Radionov&quot;;</span>
+<span class="nc" id="L331">		  s.setFirstName(firstName);</span>
+<span class="nc" id="L332">		  s.setLastName(lastName);</span>
+<span class="nc" id="L333">		  String expectedFullName = &quot;Ivan Radionov&quot;;</span>
+<span class="nc" id="L334">		  String actualsFullName = s.getFullName();</span>
+<span class="nc" id="L335">		  System.out.println(s.getFullName());</span>
+<span class="nc" id="L336">		  assertEquals(expectedFullName, actualsFullName);</span>
+<span class="nc" id="L337">	  }</span>
+	 
+	  
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span>StudentTest (07.06.2022 22:00:00)</div></body></html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>NewTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">StudentTest (07.06.2022 22:00:00)</a> &gt; <a href="../../index.html" class="el_group">unit-online-tusur</a> &gt; <a href="../index.html" class="el_bundle">src/test/java</a> &gt; <a href="index.source.html" class="el_package">online_tusur.unit_online_tusur</a> &gt; <span class="el_source">NewTest.java</span></div><h1>NewTest.java</h1><pre class="source lang-java linenums">package online_tusur.unit_online_tusur;
+
+import static org.testng.Assert.*;
+import java.util.ArrayList;
+
+import java.util.*;
+
+import org.testng.annotations.*;
+import org.testng.annotations.Optional;
+
+
+
+<span class="nc" id="L13">public class NewTest {</span>
+	List&lt;Student&gt; st;
+<span class="nc" id="L15">	Student s = new Student();</span>
+	
+	@BeforeClass
+	public void bef_class() {
+<span class="nc" id="L19">		st = new ArrayList&lt;Student&gt;();</span>
+<span class="nc" id="L20">	}	</span>
+	
+	@AfterClass
+	public void aft_class() {
+<span class="nc" id="L24">		st.clear();</span>
+<span class="nc" id="L25">	}		</span>
+
+	//Параметрезированный тест через массив данных
+	@DataProvider(name = &quot;data&quot;)
+	public static Object[][] ageData(){
+<span class="nc" id="L30">		return new Object[][] {{17,18},{18,18},{32,32},{50,50},{55,50}};</span>
+	}
+	
+	@Test(dataProvider = &quot;data&quot;,groups = {&quot;testStudent&quot;})
+	public void test5(int age, int expAge) {
+<span class="nc" id="L35">		long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L36">		System.out.println(id);</span>
+		
+<span class="nc" id="L38">		s.setAge(age);</span>
+<span class="nc" id="L39">		assertEquals(expAge,s.getAge());</span>
+<span class="nc" id="L40">	}</span>
+	
+	
+	//Параметрезированный тест
+  @Test(priority = 0, groups = {&quot;testStudent&quot;})
+  @Parameters({&quot;age&quot;,&quot;expAge&quot;})
+  public void test1(@Optional(&quot;0&quot;) int age, @Optional(&quot;0&quot;) int expAge) {
+<span class="nc" id="L47">	  long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L48">		System.out.println(id);</span>
+		
+<span class="nc" id="L50">	  s.setAge(age);</span>
+<span class="nc" id="L51">	  assertEquals(expAge,s.getAge());	  </span>
+<span class="nc" id="L52">  }</span>
+  
+  @Test(priority = 2, groups = {&quot;testCollection&quot;})
+  public void test3() {
+	  
+<span class="nc" id="L57">	  long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L58">		System.out.println(id);</span>
+<span class="nc" id="L59">	  int k = st.size();</span>
+<span class="nc" id="L60">	  st.add(new Student(&quot;Piter&quot;,&quot;Pen&quot;,16));</span>
+	  
+<span class="nc" id="L62">	  assertEquals(k+1,st.size());</span>
+<span class="nc" id="L63">  }</span>
+  
+  @Test(priority = 1, groups = {&quot;testCollection&quot;})
+  public void test2() {
+<span class="nc" id="L67">	  long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L68">		System.out.println(id);</span>
+		
+<span class="nc" id="L70">	  assertTrue(st.isEmpty());</span>
+<span class="nc" id="L71">  }</span>
+  
+  @Test(priority = 3, groups = {&quot;testCollection&quot;}, dependsOnMethods = {&quot;test3&quot;})
+  public void test4() {
+<span class="nc" id="L75">	  long id = Thread.currentThread().getId();</span>
+<span class="nc" id="L76">		System.out.println(id);</span>
+		
+<span class="nc" id="L78">	  assertTrue(st.isEmpty());</span>
+<span class="nc" id="L79">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span>StudentTest (07.06.2022 22:00:00)</div></body></html>
